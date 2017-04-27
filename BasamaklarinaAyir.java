@@ -11,7 +11,7 @@ public class Girilen_sayiyi_basamaklarina_ayirma {
      while (sayi >0)
        {
            sayac++;
-      	System.out.println(sayac+".basamağı "+sayi%10);
+      	   System.out.println(sayac+".basamağı "+sayi%10);
            sayi=sayi/10;
        } 
     }
