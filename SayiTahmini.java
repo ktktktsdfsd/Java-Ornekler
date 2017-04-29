@@ -3,66 +3,39 @@ package deneme1;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Sayı_Tahmini {
+public class SayiTahmini {
 
 	public static void main(String[] args) {
+		
 		Scanner input = new Scanner(System.in);
 		Random rastgele = new Random();
 		int cevap = rastgele.nextInt(5);
 		
-		int toplamdenemehakki = 4;
-		System.out.println("Toplam 3 Deneme Hakkınız Var");
+		int kalanhak = 3, toplamdenemehakki = 4;
+		System.out.println("Toplam 3 Deneme HakkÄ±nÄ±z Var");
 		for(int denemesayisi = 1; denemesayisi < toplamdenemehakki; denemesayisi++)
 		{
 		   int girdiginizsayi;
-		   System.out.println("0-5 Arası Sayı Bir Sayı Giriniz = ");
-		girdiginizsayi = input.nextInt();
-		
-		if(girdiginizsayi == cevap)
-		{
-			if (cevap == 5)
-				System.out.println("Tahmininiz Doğru Cevap = "+cevap+"'ti.");
-			else if(cevap == 4)
-				System.out.println("Tahmininiz Doğru Cevap = "+cevap+"'tü.");
-			else if(cevap==3)
-				System.out.println("Tahmininiz Doğru Cevap = "+cevap+"'dü.");
-			else if(cevap==2)
-				System.out.println("Tahmininiz Doğru Cevap = "+cevap+"'di.");
-			else if(cevap==1)
-				System.out.println("Tahmininiz Doğru Cevap = "+cevap+"'di.");
-			else if(cevap==0)
-				System.out.println("Tahmininiz Doğru Cevap = "+cevap+"'dı.");
+		   System.out.println("0-5 ArasÄ± SayÄ± Bir SayÄ± Giriniz = ");
+		   girdiginizsayi = input.nextInt();
 			
-			System.out.println(denemesayisi+". Denemede Doğru Cevabı Buldunuz");
-			denemesayisi=toplamdenemehakki;
-			
-		}
-		else
-		{
-			int kalanhak=toplamdenemehakki-denemesayisi;
-			kalanhak--;
-			if (kalanhak==0)
-			{
-				System.out.println("Oyun Bitti Hakkınız Kalmadı");
-				if (cevap==5)
-					System.out.println("Doğru Cevap = "+cevap+"'ti.");
-				else if(cevap==4)
-					System.out.println("Doğru Cevap = "+cevap+"'tü.");
-				else if(cevap==3)
-					System.out.println("Doğru Cevap = "+cevap+"'dü.");
-				else if(cevap==2)
-					System.out.println("Doğru Cevap = "+cevap+"'di.");
-				else if(cevap==1)
-					System.out.println("Doğru Cevap = "+cevap+"'di.");
-				else if(cevap==0)
-					System.out.println("Doğru Cevap = "+cevap+"'dı.");
-						
-			}
-			else
-				System.out.println("Tahmininiz Yanlış Tekrar Deneyiniz "+kalanhak+" Deneme Hakkınız Kaldı");
+		   if (girdiginizsayi != cevap)
+		   {
+			   kalanhak = toplamdenemehakki - denemesayisi;
+			   kalanhak--;
+			   if (kalanhak == 0)
+			   {
+				   	System.out.println("Oyun Bitti HakkÄ±nÄ±z KalmadÄ±");
+					System.out.println("DoÄŸru Cevap = " + cevap);
+			   }
+			   else System.out.println("Tahmininiz YanlÄ±ÅŸ Tekrar Deneyiniz " + kalanhak + " Deneme HakkÄ±nÄ±z KaldÄ±");
+		   }
+		   else
+		   {
+			   System.out.println(denemesayisi + ". Denemede DoÄŸru CevabÄ± Buldunuz");
+			   System.out.println("Tahmininiz DoÄŸru Cevap = " + cevap);
+			   denemesayisi = toplamdenemehakki;
+		   }
 		}
 	}
-		
-
    }
-}
