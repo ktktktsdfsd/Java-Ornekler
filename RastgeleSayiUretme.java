@@ -11,22 +11,22 @@ public class Ornek3 {
 		Scanner input = new Scanner(System.in);
 		int kacsayi;
 
-		System.out.print("Üretilecek Rastgele Sayı Adetini Giriniz = ");
+		System.out.print("Ãœretilecek Rastgele SayÃ½ Adetini Giriniz = ");
 		kacsayi = input.nextInt();
 		int maxdeger;
 
-		System.out.print("Rastgele Sayıların Max Değerini Giriniz = ");
+		System.out.print("Rastgele SayÃ½larÃ½n Max DeÃ°erini Giriniz = ");
 		maxdeger = input.nextInt();
 
 		Random rastgele = new Random();
-		int a=0;
-		int[] sayisirasi= new int[a];
-	    for(int i = 0; i < kacsayi; i++)
-	    {
-	    	a++;
-	    	System.out.println(a + ". Sayı = "+rastgele.nextInt(maxdeger));
-	    }
-	    System.out.println("Toplam " + a + " Adet Rastgele Sayı Üretilmiştir");
+	    	int a = 0;
+	    	int[] sayisirasi= new int[a];
+	    	for(int i = 0; i < kacsayi; i++)
+	    	{
+		    	a++;
+		    	System.out.println(a + ". SayÄ± = " + rastgele.nextInt(maxdeger));
+           	}
+	    	System.out.println("Toplam " + a + " Adet Rastgele SayÄ± ÃœretilmiÅŸtir");
 	}
 
 }
